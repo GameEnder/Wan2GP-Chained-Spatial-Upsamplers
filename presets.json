@@ -1,0 +1,50 @@
+[
+  {
+    "id": "flashvsr2x_lanczos15x",
+    "name": "FlashVSR 2x -> Lanczos 1.5x (3x Total)",
+    "description": "AI restoration with FlashVSR followed by sharp Lanczos upscaling.",
+    "enabled": true,
+    "stages": [
+      {
+        "method_value": "flashvsr*2",
+        "parameters": {}
+      },
+      {
+        "method_value": "lanczos*1.5",
+        "parameters": {}
+      }
+    ]
+  },
+  {
+    "id": "flashvsr2x_facerefiner",
+    "name": "FlashVSR 2x -> Face Refiner",
+    "description": "FlashVSR 2x upscaling followed by H3 Face Refiner detail enhancement.",
+    "enabled": true,
+    "stages": [
+      {
+        "method_value": "flashvsr*2",
+        "parameters": {}
+      },
+      {
+        "method_value": "h3_face_refiner",
+        "parameters": {}
+      }
+    ]
+  },
+  {
+    "id": "lanczos2x_coz2x",
+    "name": "Lanczos 2x -> Chain-of-Zoom 2x (4x Total)",
+    "description": "Pre-scale with Lanczos then refine with Chain-of-Zoom.",
+    "enabled": true,
+    "stages": [
+      {
+        "method_value": "lanczos*2",
+        "parameters": {}
+      },
+      {
+        "method_value": "coz*2",
+        "parameters": {}
+      }
+    ]
+  }
+]
