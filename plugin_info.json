@@ -1,7 +1,7 @@
 {
   "name": "Chained Spatial Upsamplers",
   "author": "Wan2GP Community",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Allows multiple spatial upsamplers and visual refiners to be staged in series in Wan2GP post-processing.",
   "type": [
     "processor",
