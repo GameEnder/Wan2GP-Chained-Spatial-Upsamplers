@@ -28,17 +28,17 @@ DEFAULT_PRESETS = [
     },
     {
         "id": "flashvsr2x_facerefiner",
-        "name": "FlashVSR 2x -> Face Refiner",
-        "description": "FlashVSR 2x upscaling followed by H3 Face Refiner detail enhancement.",
+        "name": "Face Refiner -> FlashVSR 2x",
+        "description": "H3 Face Refiner detail followed by FlashVSR 2x H3 upscaling.",
         "enabled": True,
         "stages": [
             {
-                "method_value": "flashvsr*2",
+                "method_value": "h3_face_refiner",
                 "parameters": {}
             },
             {
-                "method_value": "h3_face_refiner",
-                "parameters": {}
+                "method_value": "flashvsr*2",
+                "parameters": {}  
             }
         ]
     },
